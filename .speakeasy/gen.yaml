@@ -39,4 +39,4 @@ php:
   methodArguments: infer-optional-args
   namespace: Clerk\Backend
   outputModelSuffix: output
-  packageName: clerk/backend-php
+  packageName: clerkinc/backend-php

@@ -6,7 +6,7 @@ management:
   speakeasyVersion: 1.469.12
   generationVersion: 2.493.34
   releaseVersion: 0.1.4
-  configChecksum: 5b8bdf6625aa4365789b22bd19faec7b
+  configChecksum: e7a1ea77238fea976a13a337a8df7ee3
   published: true
 features:
   php:

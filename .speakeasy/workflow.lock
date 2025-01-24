@@ -14,7 +14,7 @@ sources:
             - latest
     clerk-openapi:
         sourceNamespace: clerk-openapi
-        sourceRevisionDigest: sha256:5b719ccaf7426d984a8281e4bd48893f3ed0eaeb64bafaf665496272d966c2f4
+        sourceRevisionDigest: sha256:7669e744dd69717cc754742276d79ab6f8951ffd9193654c24363edf0394bc21
         sourceBlobDigest: sha256:6fdff14cae98538645534e6d753b3d0343b46cc748151c493d99dca7ca717ffd
         tags:
             - latest
@@ -23,10 +23,10 @@ targets:
     clerk-php:
         source: clerk-openapi
         sourceNamespace: clerk-openapi
-        sourceRevisionDigest: sha256:5b719ccaf7426d984a8281e4bd48893f3ed0eaeb64bafaf665496272d966c2f4
+        sourceRevisionDigest: sha256:7669e744dd69717cc754742276d79ab6f8951ffd9193654c24363edf0394bc21
         sourceBlobDigest: sha256:6fdff14cae98538645534e6d753b3d0343b46cc748151c493d99dca7ca717ffd
         codeSamplesNamespace: clerk-openapi-php-code-samples
-        codeSamplesRevisionDigest: sha256:82aa379daa1f63df3fc201dd1ea541193af2640a905003f02086ade9169a8e30
+        codeSamplesRevisionDigest: sha256:d760121c650fb22bcf246e2d830011efc8c790e936d4b2a96f0dd2b61d7b76aa
     my-first-target:
         source: clerk-backend-php
         sourceNamespace: clerk-openapi
@@ -51,7 +51,7 @@ workflow:
             output: .
             publish:
                 packagist:
-                    username: clerkinc
+                    username: $packagist_username
                     token: $packagist_token
             codeSamples:
                 registry:

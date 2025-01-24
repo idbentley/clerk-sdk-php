@@ -8,7 +8,7 @@
   <br />
 </p>
 
-# clerk/backend-php
+# clerkinc/backend-php
 
 <div align="center">
 
@@ -48,7 +48,7 @@ More information about the API can be found at https://clerk.com/docs
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [clerk/backend-php](#clerkbackend-php)
+* [clerkinc/backend-php](#clerkincbackend-php)
   * [Overview](#overview)
   * [SDK Installation](#sdk-installation)
   * [Usage](#usage)
@@ -74,7 +74,7 @@ The SDK relies on [Composer](https://getcomposer.org/) to manage its dependencie
 
 To install the SDK and add it as a dependency to an existing `composer.json` file:
 ```bash
-composer require "clerk/backend-php"
+composer require "clerkinc/backend-php"
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -536,9 +536,9 @@ We're open to all community contributions!
 
 ## Security
 
-`@clerk/backend-php` follows good practices of security, but 100% security cannot be assured.
+`clerkinc/backend-php` follows good practices of security, but 100% security cannot be assured.
 
-`@clerk/backend-php` is provided **"as is"** without any **warranty**. Use at your own risk.
+`clerkinc/backend-php` is provided **"as is"** without any **warranty**. Use at your own risk.
 
 _For more information and to report security issues, please refer to the [security documentation](https://github.com/clerk/backend-php/blob/main/docs/SECURITY.md)._
 

@@ -1,5 +1,5 @@
 {
-  "name": "clerk/backend-php",
+  "name": "clerkinc/backend-php",
   "type": "library",
   "autoload": {
     "psr-4": {

@@ -30,7 +30,7 @@ class SDKConfiguration
 
     public string $genVersion = '2.493.34';
 
-    public string $userAgent = 'speakeasy-sdk/php 0.1.4 2.493.34 v1 clerk/backend-php';
+    public string $userAgent = 'speakeasy-sdk/php 0.1.4 2.493.34 v1 clerkinc/backend-php';
 
     public ?RetryConfig $retryConfig = null;
 
