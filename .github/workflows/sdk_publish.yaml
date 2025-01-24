@@ -16,7 +16,6 @@ jobs:
   publish:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/sdk-publish.yaml@v15
     with:
-      package_name: clerkinc/backend-php
       target: clerk-php
     secrets:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
