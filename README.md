@@ -388,7 +388,6 @@ if ($response->statusCode === 200) {
 
 * [ban](docs/sdks/users/README.md#ban) - Ban a user
 * [create](docs/sdks/users/README.md#create) - Create a new user
-* [createTOTP](docs/sdks/users/README.md#createtotp) - Create a TOTP for a user
 * [deleteBackupCodes](docs/sdks/users/README.md#deletebackupcodes) - Disable all user's Backup codes
 * [deleteExternalAccount](docs/sdks/users/README.md#deleteexternalaccount) - Delete External Account
 * [deleteTotp](docs/sdks/users/README.md#deletetotp) - Delete all the user's TOTPs
@@ -455,6 +454,7 @@ declare(strict_types=1);
 require 'vendor/autoload.php';
 
 use Clerk\Backend;
+use Clerk\Backend\Models\Errors;
 
 $sdk = Backend\ClerkBackend::builder()
     ->setSecurity(
@@ -485,7 +485,7 @@ try {
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally using the `setServerUrl(string $serverUrl)` builder method when initializing the SDK client instance. For example:
+The default server can be overridden globally using the `setServerUrl(string $serverUrl)` builder method when initializing the SDK client instance. For example:
 ```php
 declare(strict_types=1);
 
