@@ -12,7 +12,7 @@ use Clerk\Backend\Utils\SpeakeasyMetadata;
 class ListWaitlistEntriesRequest
 {
     /**
-     * Filter waitlist entries by email address
+     * Filter waitlist entries by `email_address` or `id`
      *
      * @var ?string $query
      */
@@ -68,6 +68,7 @@ class ListWaitlistEntriesRequest
      * @param  ?string  $query
      * @param  ?ListWaitlistEntriesQueryParamStatus  $status
      * @param  ?string  $orderBy
+     * @phpstan-pure
      */
     public function __construct(?string $query = null, ?ListWaitlistEntriesQueryParamStatus $status = null, ?int $limit = 10, ?int $offset = 0, ?string $orderBy = '-created_at')
     {

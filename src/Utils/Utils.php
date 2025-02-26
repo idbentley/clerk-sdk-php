@@ -111,7 +111,7 @@ class Utils
             $type = $parts[0];
             $subtype = $parts[1];
 
-            if ($pattern === '$type/*' || $pattern === '*/$subtype') {
+            if ($pattern === "$type/*" || $pattern === "*/$subtype") {
                 return true;
             }
         }
@@ -356,6 +356,33 @@ class Utils
         return $ret;
     }
 
+    /**
+     * matchStatusCodes
+     *
+     * @param  int  $statusCode
+     * @param  array<string>  $statusCodes
+     * @return bool
+     */
+    public static function matchStatusCodes(int $statusCode, array $statusCodes): bool
+    {
+        $statusCode = (string) $statusCode;
+        if (in_array('default', $statusCodes)) {
+            return true;
+        }
+
+        foreach ($statusCodes as $code) {
+            if ($code == $statusCode) {
+                return true;
+            }
+
+            if (substr($code, -2) === 'XX' && substr($code, 0, 1) === substr($statusCode, 0, 1)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }
 
 function removePrefix(string $text, string $prefix): string
@@ -408,7 +435,7 @@ function valToString(mixed $val, array $extras): string
                         return '"'.$val->__toString().'"';
                     }
 
-                    return $val->__toString();
+                    return (string) (float) $val->__toString();
                 default:
                     if (is_a($val, \BackedEnum::class, true)) {
                         $enumVal = $val->value;

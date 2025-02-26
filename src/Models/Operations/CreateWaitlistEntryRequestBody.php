@@ -20,7 +20,7 @@ class CreateWaitlistEntryRequestBody
     public string $emailAddress;
 
     /**
-     * Optional flag which denotes whether an email invitation should be sent to the given email address.
+     * Optional flag which denotes whether a confirmation email should be sent to the given email address.
      *
      * Defaults to `true`.
      *
@@ -33,6 +33,7 @@ class CreateWaitlistEntryRequestBody
     /**
      * @param  string  $emailAddress
      * @param  ?bool  $notify
+     * @phpstan-pure
      */
     public function __construct(string $emailAddress, ?bool $notify = null)
     {

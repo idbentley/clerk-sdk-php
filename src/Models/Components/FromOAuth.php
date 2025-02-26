@@ -35,34 +35,44 @@ class FromOAuth
 
     /**
      *
+     * @var ?int $attempts
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attempts')]
+    public ?int $attempts;
+
+    /**
+     *
      * @var ?ErrorClerkError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Clerk\Backend\Models\Components\ErrorClerkError')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Clerk\Backend\Models\Components\ErrorClerkError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ErrorClerkError $error = null;
 
     /**
      *
-     * @var ?int $attempts
+     * @var ?string $verifiedAtClient
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('attempts')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('verified_at_client')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?int $attempts = null;
+    public ?string $verifiedAtClient = null;
 
     /**
      * @param  FromOAuthVerificationStatus  $status
      * @param  string  $strategy
      * @param  ?int  $expireAt
-     * @param  ?ErrorClerkError  $error
      * @param  ?int  $attempts
+     * @param  ?ErrorClerkError  $error
+     * @param  ?string  $verifiedAtClient
+     * @phpstan-pure
      */
-    public function __construct(FromOAuthVerificationStatus $status, string $strategy, ?int $expireAt = null, ?ErrorClerkError $error = null, ?int $attempts = null)
+    public function __construct(FromOAuthVerificationStatus $status, string $strategy, ?int $expireAt = null, ?int $attempts = null, ?ErrorClerkError $error = null, ?string $verifiedAtClient = null)
     {
         $this->status = $status;
         $this->strategy = $strategy;
         $this->expireAt = $expireAt;
-        $this->error = $error;
         $this->attempts = $attempts;
+        $this->error = $error;
+        $this->verifiedAtClient = $verifiedAtClient;
     }
 }
